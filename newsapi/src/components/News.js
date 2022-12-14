@@ -1,0 +1,180 @@
+import React, { Component } from 'react'
+import NewsItem from './NewsItem'
+
+export class News extends Component {
+    articles = [
+        {
+            "source": {
+                "id": "bbc-news",
+                "name": "BBC News"
+            },
+            "author": "BBC News",
+            "title": "Searches into the night after deadly blast on Jersey",
+            "description": "An explosion at a block of flats in St Helier leaves three people dead and a dozen missing.",
+            "url": "http://www.bbc.co.uk/news/world-europe-jersey-63930916",
+            "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/13D72/production/_127966218_1fe8a1b2eb2be09489a22fa0af3b1cc812101acd-2.jpg",
+            "publishedAt": "2022-12-11T07:37:31.9677236Z",
+            "content": "Media caption, Footage from the scene of the explosion shows a large fire\r\nEmergency workers are searching through the night after an explosion at a block of flats in Jersey left three people dead an… [+5042 chars]"
+        },
+        {
+            "source": {
+                "id": "bbc-news",
+                "name": "BBC News"
+            },
+            "author": "BBC Sport",
+            "title": "'Everyone loves us' - joy at Morocco history makers",
+            "description": "The marvellous Moroccans have lit up this World Cup - and their fans got reward by witnessing their side becoming the first from Africa to reach the semi-finals.",
+            "url": "http://www.bbc.co.uk/sport/football/63931391",
+            "urlToImage": "https://ichef.bbci.co.uk/live-experience/cps/624/cpsprodpb/C89C/production/_127965315_morocco.jpg",
+            "publishedAt": "2022-12-11T07:37:28.3576571Z",
+            "content": "Watch Moroccan fans celebrate historic World Cup win\r\n<table><tr><th>Fifa World Cup</th></tr>\r\n<tr><td>Host nation: Qatar Dates: 20 November-18 December Coverage: Live on BBC TV, BBC iPlayer, BBC Rad… [+6813 chars]"
+        },
+        {
+            "source": {
+                "id": "bbc-news",
+                "name": "BBC News"
+            },
+            "author": "BBC News",
+            "title": "Ukraine war: Odesa and Melitopol under attack",
+            "description": "Russian drone attacks leave 1.5 million Ukrainians without power and Kyiv bombards occupied Melitopol.",
+            "url": "http://www.bbc.co.uk/news/world-europe-63933132",
+            "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/17102/production/_127966449_melitopol.png",
+            "publishedAt": "2022-12-11T06:07:21.2489116Z",
+            "content": "Southern Ukraine has been hit by strikes from both sides in the war, with Russia launching drones at Odesa and Kyiv fighting back in Melitopol.\r\nThe Ukrainian army said it shot down 10 drones on Satu… [+1389 chars]"
+        },
+        {
+            "source": {
+                "id": "bbc-news",
+                "name": "BBC News"
+            },
+            "author": "BBC Sport",
+            "title": "Brook completes sublime ton as England build lead - radio & text",
+            "description": "Follow live text updates and BBC Test Match Special commentary from day three of the second Test between England and Pakistan at the Multan Cricket Stadium.",
+            "url": "http://www.bbc.co.uk/sport/live/cricket/62865933",
+            "urlToImage": "https:////m.files.bbci.co.uk/modules/bbc-morph-sport-seo-meta/1.23.3/images/bbc-sport-logo.png",
+            "publishedAt": "2022-12-11T05:37:26.1093175Z",
+            "content": "An ugly heave and Robinson is bowled. That's 11 in the match for Abrar Ahmed.\r\nThat shot from Robinson confirms what we already knew, England are ready to get on with it now.\r\nHe was down the pitch t… [+65 chars]"
+        },
+        {
+            "source": {
+                "id": "bbc-news",
+                "name": "BBC News"
+            },
+            "author": "BBC News",
+            "title": "Nasa's Orion capsule on target for splashdown",
+            "description": "After a test flight around the Moon, America's next-generation astronaut ship is about to come home.",
+            "url": "http://www.bbc.co.uk/news/science-environment-63907649",
+            "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/1A1C/production/_127948660_re-entry.jpg",
+            "publishedAt": "2022-12-11T04:37:24.3739211Z",
+            "content": "Media caption, \"Earthrise\": Orion saw our planet climbing above the Moon's horizon\r\nThe US space agency Nasa is all set to bring home its Orion capsule. \r\nThe spaceship, which has been on a three-wee… [+4554 chars]"
+        },
+        {
+            "source": {
+                "id": "bbc-news",
+                "name": "BBC News"
+            },
+            "author": "BBC News",
+            "title": "Chile volcano: Alert issued after Lascar rumbles to life",
+            "description": "The Lascar volcano, in the north, sends a plume of volcanic ash and hot gases 6,000m into the sky.",
+            "url": "http://www.bbc.co.uk/news/world-latin-america-63932228",
+            "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/11982/production/_127966027_chilevolcano.jpg",
+            "publishedAt": "2022-12-11T01:37:22.2489519Z",
+            "content": "Chilean officials have put a safety warning in place after a volcano sent an eruptive column 6,000m (almost 20,000ft) into the sky.\r\nLascar volcano, which sits in the Andes, rumbled into action on Sa… [+994 chars]"
+        },
+        {
+            "source": {
+                "id": "bbc-news",
+                "name": "BBC News"
+            },
+            "author": "BBC News",
+            "title": "Base editing: Revolutionary therapy clears girl's incurable cancer",
+            "description": "New way of altering DNA is used to engineer an \"exciting\", experimental therapy for a 13-year girl.",
+            "url": "http://www.bbc.co.uk/news/health-63859184",
+            "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/4A32/production/_127949981_still.jpg",
+            "publishedAt": "2022-12-11T00:37:21.5932704Z",
+            "content": "A teenage girl's incurable cancer has been cleared from her body in the first use of a revolutionary new type of medicine. \r\nAll other treatments for Alyssa's leukaemia had failed. \r\nSo doctors at Gr… [+6538 chars]"
+        },
+        {
+            "source": {
+                "id": "bbc-news",
+                "name": "BBC News"
+            },
+            "author": "BBC News",
+            "title": "Rita Moreno: If I wasn't Hispanic, I'd have had a different career",
+            "description": "West Side Story icon Rita Moreno says discrimination left her with an unfair share of rubbish film roles.",
+            "url": "http://www.bbc.co.uk/news/entertainment-arts-63861394",
+            "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/1473A/production/_127907738_gettyimages-1199142371.jpg",
+            "publishedAt": "2022-12-10T22:52:22.6708662Z",
+            "content": "Media caption, The West Side Story icon says she experienced discrimination in Hollywood\r\nFamed for her role in West Side Story, Rita Moreno says the discrimination she faced in Hollywood stopped her… [+6486 chars]"
+        },
+        {
+            "source": {
+                "id": "bbc-news",
+                "name": "BBC News"
+            },
+            "author": "BBC News",
+            "title": "Watch Morocco fans celebrate historic World Cup win",
+            "description": "Morocco is the first ever African side to reach the World Cup semi-finals after a win over Portugal.",
+            "url": "http://www.bbc.co.uk/news/world-63931443",
+            "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/36E8/production/_127965041_p0dncrnj.jpg",
+            "publishedAt": "2022-12-10T18:22:19.6713937Z",
+            "content": "Fans around the world are celebrating Morocco's shock win over Portugal, as it becomes the first African side to reach the World Cup semi-finals. \r\nMorocco has defied expectations in this tournament,… [+37 chars]"
+        },
+        {
+            "source": {
+                "id": "bbc-news",
+                "name": "BBC News"
+            },
+            "author": "BBC News",
+            "title": "Nobel Peace Prize: Russian laureate 'told to turn down award'",
+            "description": "Yan Rachinsky, from rights group Memorial, tells the BBC he ignored the order from the Kremlin.",
+            "url": "http://www.bbc.co.uk/news/world-europe-63929130",
+            "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/CACC/production/_127961915_p0dnbbnd.jpg",
+            "publishedAt": "2022-12-10T14:52:22.1396285Z",
+            "content": "Media caption, Yan Rachinsky from Memorial: \"In today's Russia no-one's personal safety is guaranteed\"\r\nThe Russian co-winner of this year's Nobel Peace Prize has said Kremlin authorities told him to… [+4133 chars]"
+        }
+    ]
+
+
+
+    constructor() {
+        super();
+
+        this.state = {
+            articles: this.articles,
+            loading: false
+
+        }
+    }
+    async componentDidMount(){
+        let url= "https://newsapi.org/v2/top-headlines?country=us&apiKey=bcedb35288fb4ffe93b1150b7de39a02"
+        let data= await fetch(url);
+        let parsedData= await data.json()
+        console.log(data);
+        this.setState({articles: parsedData.articles})
+    }
+    render() {
+        return (
+            <div className='container'>
+                <h2> Today's Headlines</h2>
+
+                <div className="row">
+                    {this.state.articles.map((element) => {
+                        return <div className="col-md-4" key={element.url}>
+                            <NewsItem title={element.title.slice(0, 45)}
+                                description={element.description} author={element.author}
+                                imgUrl={element.urlToImage}
+                                newsUrl={element.url} />
+                        </div>
+                    }
+                    )}
+
+
+                </div>
+
+            </div>
+        )
+    }
+}
+
+export default News
